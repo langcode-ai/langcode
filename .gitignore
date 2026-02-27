@@ -1,0 +1,24 @@
+.history/
+.cursor/
+.vscode/
+.idea/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pytype/
+.dmypy.json
+dmypy.json
+.pyre/
+.deepagent_fs/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+.env
+
+# Project
+.langcode/settings.local.json

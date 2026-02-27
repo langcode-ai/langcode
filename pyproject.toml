@@ -1,0 +1,43 @@
+[project]
+name = "langcode"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+dependencies = [
+    "langchain>=1.0",
+    "langchain-anthropic>=0.3",
+    "prompt-toolkit>=3.0",
+    "rich>=13.0",
+    "click>=8.0",
+    "python-dotenv>=1.0",
+    "pyyaml>=6.0",
+    "langchain-mcp-adapters>=0.1",
+    "langgraph-checkpoint-sqlite>=3.0.3",
+]
+
+[project.scripts]
+langcode = "langcode.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+ignore = ["E501"]
+
+[tool.pyright]
+pythonVersion = "3.10"
+typeCheckingMode = "basic"
+include = ["src"]
+venvPath = "."
+venv = ".venv"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
